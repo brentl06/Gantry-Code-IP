@@ -272,10 +272,10 @@ void lowerproxy::UpdateJoystickStatus(turtle& turtle_){
     robot_state.data.push_back(turtle_inter_.turtle_chassis.left_sweeping.pos_estimate); //left sweeping motor position status
     robot_state.data.push_back(turtle_inter_.turtle_chassis.right_adduction.pos_estimate); //right adduction motor position status
     robot_state.data.push_back(turtle_inter_.turtle_chassis.right_sweeping.pos_estimate); //right sweeping motor position status
-    robot_state.data.push_back(turtle_inter_.turtle_chassis.left_adduction.iq_setpoint); //left adduction motor torque status //change to iq_measured
-    robot_state.data.push_back(turtle_inter_.turtle_chassis.left_sweeping.iq_setpoint); //left sweeping motor torque status //change to iq_measured
-    robot_state.data.push_back(turtle_inter_.turtle_chassis.right_adduction.iq_setpoint); //right sweeping motor torque status //change to iq_measured
-    robot_state.data.push_back(turtle_inter_.turtle_chassis.right_sweeping.iq_setpoint); //left adduction motor torque status //change to iq_measured
+    robot_state.data.push_back(turtle_inter_.turtle_chassis.left_adduction.iq_measured); //left adduction motor torque status // originally iq_setpoint
+    robot_state.data.push_back(turtle_inter_.turtle_chassis.left_sweeping.iq_measured); //left sweeping motor torque status // originally iq_setpoint
+    robot_state.data.push_back(turtle_inter_.turtle_chassis.right_adduction.iq_measured); //right sweeping motor torque status // originally iq_setpoint
+    robot_state.data.push_back(turtle_inter_.turtle_chassis.right_sweeping.iq_measured); //left adduction motor torque status // originally iq_setpoint
     robot_state.data.push_back(turtle_inter_.turtle_control.left_adduction.set_input_position_radian.input_position);
     robot_state.data.push_back(turtle_inter_.turtle_control.left_sweeping.set_input_position_radian.input_position);
     robot_state.data.push_back(turtle_inter_.turtle_control.right_adduction.set_input_position_radian.input_position);

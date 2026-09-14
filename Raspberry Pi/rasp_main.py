@@ -16,7 +16,6 @@ def launch_rviz(rviz_config):
 
     
 def launch_bridge():
-    # Open /dev/null file
     with open('/dev/null', 'w') as dev_null:
         process = subprocess.Popen(["ros2", "launch", "foxglove_bridge", "foxglove_bridge_launch.xml"], stdout=dev_null, stderr=dev_null)
     return process
@@ -72,8 +71,6 @@ def main():
     # manager.register('data_sync', './multimedia/dataSync.py')
     # manager.register('gui', './LASSIE_GUI/lassie_gui.py')
     manager.register('video_sync', '/home/traveler/highlevel/multimedia/videoSync.py')
-
-    # print(manager.nodes)
     manager.block()
 
 

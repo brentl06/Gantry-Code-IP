@@ -1,2 +1,4 @@
 # Code Additions/Changes
-Main change to `data_collector_new.py` is the removal of the MOCAP system that was involved for the stationary system but is no longer applicable for the gantry system.
+## `data_collector_new.py`
+Code tied to the mocap system was removed, as motion capture is only used for the stationary system, not the gantry system.
+Additionally, lines 883-897 of `main()` will construct the controller that connects to the gantry and either move or stand still, based on user input.

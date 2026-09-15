@@ -879,7 +879,7 @@ def main() -> int:
     print("Trajectory sequence:")
     for block in trajectory_sequence:
         print(f"  {block.spec.name} x{block.count}")
-
+  # new inclusion of connecting to the gantry
     gantry: Optional[GantryController] = None
     gantry_position_metadata: Optional[Dict[str, float]] = None
     if not args.skip_gantry:
@@ -895,7 +895,7 @@ def main() -> int:
             position = gantry.get_position()
         gantry_position_metadata = position.as_metadata()
         print(f"Gantry position for this session: {gantry_position_metadata}")
-
+# ends here
     rclpy.init()
     node = ControlNodeHighRate()
     executor = SingleThreadedExecutor()
